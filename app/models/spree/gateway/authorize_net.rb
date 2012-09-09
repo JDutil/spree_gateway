@@ -2,9 +2,9 @@ module Spree
   class Gateway::AuthorizeNet < Gateway
     preference :login, :string
     preference :password, :string
-    
-    attr_accessible :preferred_login, :preferred_password
-    
+
+    attr_accessible :preferred_login, :preferred_password, :preferred_test
+
     def provider_class
       ActiveMerchant::Billing::AuthorizeNetGateway
     end
